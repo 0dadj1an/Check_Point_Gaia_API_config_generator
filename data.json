@@ -1,0 +1,116 @@
+{   
+    "node1": [
+      
+      {"delete-vlan-interface":[
+
+        {"name":"eth1.11"},
+    
+        {"name":"eth1.12"},
+    
+        {"name":"eth1.13"},
+    
+        {"name":"eth1.14"}]
+      },
+
+      {"add-vlan-interface":[
+
+        {"parent":"eth1","id":11, "ipv4-address":"10.10.20.2", "ipv4-mask-length":24},
+    
+        {"parent":"eth1","id":12, "ipv4-address":"10.10.30.2", "ipv4-mask-length":24},
+    
+        {"parent":"eth1","id":13, "ipv4-address":"10.10.40.2", "ipv4-mask-length":24},
+    
+        {"parent":"eth1","id":14, "ipv4-address":"10.10.50.2", "ipv4-mask-length":24}]},
+
+
+      {"delete-vlan-interface":[
+
+        {"name":"eth1.11"},
+    
+        {"name":"eth1.12"},
+    
+        {"name":"eth1.13"},
+    
+        {"name":"eth1.14"}]
+      },
+
+      
+      {"set-vlan-interface":[
+
+      {"name":"eth1.11", "enabled":"False"},
+  
+      {"name":"eth1.12", "enabled":"False"},
+  
+      {"name":"eth1.13", "enabled":"False"},
+  
+      {"name":"eth1.14","enabled":"False"}]}
+
+    ],
+  
+     "node2": [
+      {"delete-vlan-interface":[
+
+        {"name":"eth1.11"},
+    
+        {"name":"eth1.12"},
+    
+        {"name":"eth1.13"},
+    
+        {"name":"eth1.14"}]},
+
+
+      {"add-vlan-interface":[
+
+        {"parent":"eth1","id":11, "ipv4-address":"10.10.20.2", "ipv4-mask-length":24},
+    
+        {"parent":"eth1","id":12, "ipv4-address":"10.10.30.2", "ipv4-mask-length":24},
+    
+        {"parent":"eth1","id":13, "ipv4-address":"10.10.40.2", "ipv4-mask-length":24},
+    
+        {"parent":"eth1","id":14, "ipv4-address":"10.10.50.2", "ipv4-mask-length":24}]}
+
+     ],
+  
+     "single":[
+      {"delete-vlan-interface":[
+
+        {"name":"eth1.11"},
+    
+        {"name":"eth1.12"},
+    
+        {"name":"eth1.13"},
+    
+        {"name":"eth1.14"}]},
+
+
+      {"add-vlan-interface":[
+      
+        {"parent":"eth1","id":11, "ipv4-address":"10.10.20.2", "ipv4-mask-length":24, "comments":"9000"},
+    
+        {"parent":"eth1","id":12, "ipv4-address":"10.10.30.2", "ipv4-mask-length":24},
+    
+        {"parent":"eth1","id":13, "ipv4-address":"10.10.40.2", "ipv4-mask-length":24},
+    
+        {"parent":"eth1","id":14, "ipv4-address":"10.10.50.2", "ipv4-mask-length":24}]
+      },
+      {"set-physical-interface":[
+        {"name":"eth1", "mtu":9000}]},
+
+      {"set-vlan-interface":[
+        {"name":"eth1.11", "mtu":9000}]},
+
+      {"show-static-routes":[
+        {}]},
+
+      {"run-script":[
+        {"script": "route -n"},
+        {"script": "clish -c \"lock database override \""},
+        {"script": "uname -a"},
+        {"script": "clish -c \"set hostname IVOSH\""},
+        {"script": "uname -a"}]}
+
+
+        
+     ]
+    }
+  
