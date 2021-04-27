@@ -13,8 +13,8 @@ mode single - single IP (single node) /// mode cluster -  (IP of every node)
 see help below
 
 
-script respects generall API calls for Gaia OS, what you can use, that can be added to json file
-call = delete-vlan-interface ( needs to be valid Gia OS API call),  payload = {"name":"eth1.11"} - needs to be valid payload
+- script respects generall API calls for Gaia OS /// what you can use, that can be added to json file ///
+- call = delete-vlan-interface ( needs to be valid Gia OS API call),  payload = {"name":"eth1.11"} - needs to be valid payload
 
 keys node1, node2, singe are mandatory, but can be empty, see  ```python gaia_api_connector.py -jh JH```
 
