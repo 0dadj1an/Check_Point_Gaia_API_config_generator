@@ -2,8 +2,6 @@
 configure CP FW via Gaia OS API only
 
 
-# GAIA_API_davkovac
-
 - data from json file are pushed to Gaia OS via API 
 
 - interaactive mode:
