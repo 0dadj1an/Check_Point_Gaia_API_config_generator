@@ -8,6 +8,7 @@ data from json faile are pushed to Gaia OS via API
 
 - interaactive mode:
 mode single - single IP (single node)
+
 mode cluster -  (IP of every node)
 
 - params mode:
