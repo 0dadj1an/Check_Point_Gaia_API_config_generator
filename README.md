@@ -7,9 +7,7 @@ configure CP FW via Gaia OS API only
 data from json faile are pushed to Gaia OS via API 
 
 - interaactive mode:
-mode single - single IP (single node)
-
-mode cluster -  (IP of every node)
+mode single - single IP (single node) /// mode cluster -  (IP of every node)
 
 - params mode:
 see help below
