@@ -4,7 +4,7 @@ configure CP FW via Gaia OS API only
 
 # GAIA_API_davkovac
 
-data from json faile are pushed to Gaia OS via API 
+- data from json file are pushed to Gaia OS via API 
 
 - interaactive mode:
 mode single - single IP (single node) /// mode cluster -  (IP of every node)
@@ -16,14 +16,14 @@ see help below
 - script respects generall API calls for Gaia OS /// what you can use, that can be added to json file ///
 - call = delete-vlan-interface ( needs to be valid Gia OS API call),  payload = {"name":"eth1.11"} - needs to be valid payload
 
-keys node1, node2, singe are mandatory, but can be empty, see  ```python gaia_api_connector.py -jh JH```
+- keys node1, node2, singe are mandatory, but can be empty, see  ```python gaia_api_connector.py -jh JH```
 
-Gaia OS API viz.
+- Gaia OS API viz.
 https://sc1.checkpoint.com/documents/latest/GaiaAPIs/index.html?#introduction~v1.5%20
 
 
 
-help:
+- help:
 ```
 python gaia_api_connector.py -h
 usage: gaia_api_connector.py [-h] [-s SINGLE] [-jh JH] [-n1 NODE1] [-n2 NODE2]
