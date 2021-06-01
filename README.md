@@ -25,7 +25,7 @@ https://sc1.checkpoint.com/documents/latest/GaiaAPIs/index.html?#introduction~v1
 ```
 python gaia_api_connector.py -h
 usage: gaia_api_connector.py [-h] [-s SINGLE] [-jh JH] [-n1 NODE1] [-n2 NODE2]
-                             [-u USER] [-p PASSWORD] [-v VERSION] [-d PATH]
+                             [-u USER] [-v VERSION] [-d PATH]
 
 _Script for Gaia API modification_
 
@@ -36,7 +36,6 @@ optional arguments:
   -n1 NODE1    spiecify cluster node1 IP
   -n2 NODE2    spiecify cluster node2 IP
   -u USER      spiecify user name
-  -p PASSWORD  spiecify password
   -v VERSION   spiecify version to run [cluster/single]
   -d PATH      spiecify path to json data, default is the same directory
 ```
