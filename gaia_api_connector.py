@@ -465,7 +465,6 @@ class Interactive_Init_Handler():
             argParser.add_argument("-n1", dest="node1", help=('spiecify cluster node1 IP'), required=False)
             argParser.add_argument("-n2", dest="node2", help=('spiecify cluster node2 IP'), required=False)
             argParser.add_argument("-u", dest="user", help=('spiecify user name'), required=False)
-            argParser.add_argument("-p", dest="password", help=('spiecify password'), required=False)
             argParser.add_argument("-v", dest="version", help=('spiecify version to run [cluster/single]'), required=False)
             argParser.add_argument("-d", dest="path", help=('spiecify path to json data, default is the same directory'), required=False)
             args = argParser.parse_args() 
@@ -474,7 +473,7 @@ class Interactive_Init_Handler():
                 sys.exit(1)
             
             # check if args are filled up, if not do interactive mode
-            if args.user == None and args.password == None and args.version == None and args.path == None:
+            if args.user == None and args.version == None and args.path == None:
                 
                 print("###############################",
                     
@@ -559,11 +558,11 @@ class Interactive_Init_Handler():
                     
             # non interactive mode here
             else:
-                if args.user == None or args.password == None or args.version == None or args.path == None :
+                if args.user == None or args.version == None or args.path == None :
                     print ("migging arguments, run -h option")
                 else:
                     self.user = args.user
-                    self.password = args.password
+                    self.password = getpass.getpass()
                     self.version = args.version
                     self.path = args.path
                     
